@@ -318,7 +318,7 @@ class FlicksScreen extends Component {
             handleNope={this.handleNope}
             cardRemoved={this.handleRemove}
             showYup={false}
-            onClickHandler={null}
+          
             // yupText="LIKE"
             // yupStyle={{
             //   marginBottom: height * 0.035,

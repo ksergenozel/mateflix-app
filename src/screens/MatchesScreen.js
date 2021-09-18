@@ -305,7 +305,6 @@ export default class MatchesScreen extends Component {
             renderCard={data => (
               <Card data={data} navigation={this.props.navigation} />
             )}
-            onClickHandler={null}
             handleYup={this.handleYup}
             handleNope={this.handleNope}
             cardRemoved={this.handleRemove}
