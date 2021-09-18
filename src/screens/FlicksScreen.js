@@ -175,7 +175,7 @@ class Card extends Component {
         />
         <View>
           <Text
-            numberOfLines={5}
+            numberOfLines={3}
             style={{
               color: Colors.MAIN_TITLE_COLOR,
               fontSize: 14.5,

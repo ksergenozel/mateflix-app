@@ -203,7 +203,7 @@ class Card extends Component {
           </View>
 
           <Text
-            numberOfLines={5}
+            numberOfLines={3}
             style={{
               color: Colors.MAIN_TITLE_COLOR,
               fontSize: 14.5,
@@ -227,7 +227,7 @@ export default class MatchesScreen extends Component {
 
   componentDidMount = () => {
     setTimeout(async () => {
-      const response = await MoviesAPI.getRandomMovies(this.state.page);
+      const response = await MoviesAPI.getRandomMovies(1);
       const results = await response.results;
 
       this.setState({
