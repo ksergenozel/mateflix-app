@@ -6,12 +6,12 @@ import {
   SafeAreaView,
   Dimensions,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import Colors from '../utils/Colors';
 import Constants from '../utils/Constants';
 import IonIcons from 'react-native-vector-icons/Ionicons';
-import FeatherIcon from 'react-native-vector-icons/Feather';
-import { ScrollView } from 'react-native-gesture-handler';
+import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
@@ -30,6 +30,19 @@ export default class ProfileScreen extends React.Component {
             alignItems: 'center',
             paddingBottom: Constants.MAIN_MARGIN_SIZE * 1,
           }}>
+          {/* <TouchableOpacity
+            style={{
+              zIndex: 1,
+              position: 'absolute',
+              top: Constants.MAIN_MARGIN_SIZE * 0.75,
+              right: Constants.MAIN_MARGIN_SIZE * 0.75,
+            }}>
+            <MaterialIcon
+              name="exit-run"
+              size={27.5}
+              color={Colors.TAB_BAR_GRAY}
+            />
+          </TouchableOpacity> */}
           <View
             style={{
               width: width,
@@ -68,6 +81,8 @@ export default class ProfileScreen extends React.Component {
                   backgroundColor: Colors.MAIN_GRAY,
                   borderRadius: height * 0.175 * 0.5,
                   marginHorizontal: Constants.MAIN_MARGIN_SIZE * 0.75,
+                  borderColor: Colors.MAIN_BORDER_COLOR,
+                  borderWidth: 1.5,
                 }}
               />
 
@@ -83,11 +98,11 @@ export default class ProfileScreen extends React.Component {
                   justifyContent: 'center',
                   alignItems: 'center',
                 }}>
-                <FeatherIcon
-                style={{marginLeft: 2, marginTop: 1}}
-                  name="edit"
-                  size={24}
-                  color={Colors.MAIN_ICON_COLOR}
+                <IonIcons
+                  style={{ marginLeft: 0.5, marginTop: 1.25 }}
+                  name="ios-cog-outline"
+                  size={35}
+                  color={Colors.MAIN_GRAY}
                 />
               </TouchableOpacity>
             </View>
@@ -150,7 +165,7 @@ export default class ProfileScreen extends React.Component {
                 marginRight: Constants.MAIN_MARGIN_SIZE * 0.25,
               }}
               name="ios-location-sharp"
-              size={22}
+              size={21}
               color={Colors.MAIN_ICON_COLOR}
             />
 

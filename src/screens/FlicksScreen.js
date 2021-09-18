@@ -156,7 +156,7 @@ class Card extends Component {
             <EntypoIcon
               name="info-with-circle"
               size={20}
-              color={Colors.MAIN_GRAY}
+              color={Colors.TAB_BAR_GRAY}
             />
           </TouchableOpacity>
         </View>

@@ -14,6 +14,7 @@ import MoviesAPI from '../api/MoviesAPI';
 import Colors from '../utils/Colors';
 import Constants from '../utils/Constants';
 import IonIcons from 'react-native-vector-icons/Ionicons';
+import EntypoIcon from 'react-native-vector-icons/Entypo';
 
 LogBox.ignoreAllLogs();
 
@@ -24,7 +25,7 @@ class Card extends Component {
   render() {
     return (
       <View style={styles.card}>
-        {/* <View
+        <View
           style={{
             display: 'flex',
             flexDirection: 'row',
@@ -32,121 +33,16 @@ class Card extends Component {
             width: width * 0.825,
             justifyContent: 'space-between',
           }}>
-          <View style={{ display: 'flex', flexDirection: 'row' }}>
-            <IonIcons
-              ƒstyle={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average >= 0 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 1 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 2 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 3 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 4 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 5 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 6 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 7 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                marginRight: width * 0.005,
-                display: this.props.data.vote_average > 8 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-            <IonIcons
-              style={{
-                display: this.props.data.vote_average > 9 ? 'flex' : 'none',
-                alignSelf: 'flex-end',
-              }}
-              name="ios-star-sharp"
-              size={18}
-              color={Colors.MAIN_GOLD_COLOR}
-            />
-          </View>
+          <View />
 
-          <TouchableOpacity
-            onPress={() =>
-              this.props.navigation.navigate('Details', {
-                id: this.props.data.id,
-              })
-            }>
+          <TouchableOpacity>
             <EntypoIcon
               name="info-with-circle"
               size={20}
-              color={Colors.MAIN_GRAY}
+              color={Colors.TAB_BAR_GRAY}
             />
           </TouchableOpacity>
-        </View> */}
+        </View>
 
         <Image
           style={{
@@ -185,10 +81,10 @@ class Card extends Component {
               }}>
               <IonIcons
                 style={{
-                  marginRight: Constants.MAIN_MARGIN_SIZE * 0.25,
+                  marginRight: Constants.MAIN_MARGIN_SIZE * 0.2,
                 }}
                 name="ios-location-sharp"
-                size={16}
+                size={17.5}
                 color={Colors.MAIN_GRAY}
               />
               <Text

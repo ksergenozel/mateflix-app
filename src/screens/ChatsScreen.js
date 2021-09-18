@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, SafeAreaView, Dimensions } from 'react-native';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { Text, StyleSheet, View, SafeAreaView, Dimensions, TouchableOpacity, ScrollView} from 'react-native';
 import Colors from '../utils/Colors';
 import Constants from '../utils/Constants';
 
