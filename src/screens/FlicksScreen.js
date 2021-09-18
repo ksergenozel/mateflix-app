@@ -225,7 +225,7 @@ class FlicksScreen extends Component {
     })
   }
 
-  handleTap = async () => {
+  handleRemove = async () => {
     this.setState({
       isHidden: true,
     });
@@ -309,15 +309,16 @@ class FlicksScreen extends Component {
           }}>
           <SwipeCards
             loop={true}
-            // onLoop={() => this.handleTap()}
+            // onLoop={() => this.handleRemove()}
             cards={this.state.cards}
             renderCard={data => (
               <Card data={data} navigation={this.props.navigation} />
             )}
             handleYup={this.handleYup}
             handleNope={this.handleNope}
-            cardRemoved={this.handleTap}
+            cardRemoved={this.handleRemove}
             showYup={false}
+            onClickHandler={null}
             // yupText="LIKE"
             // yupStyle={{
             //   marginBottom: height * 0.035,
