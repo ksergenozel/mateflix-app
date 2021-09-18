@@ -216,7 +216,7 @@ class FlicksScreen extends Component {
 
   handleYup = (card) => {
     this.setState({
-      color: '#00CC00'
+      color: Colors.MAIN_GREEN
     })
   }
   handleNope = (card) => {
@@ -326,14 +326,14 @@ class FlicksScreen extends Component {
             //   justifyContent: 'center',
             //   width: width * 0.325,
             //   height: width * 0.125,
-            //   borderColor: '#00CC00',
+            //   borderColor: Colors.MAIN_GREEN,
             //   borderRadius: 8,
             // }}
             // yupTextStyle={{
             //   position: 'absolute',
             //   textAlign: 'center',
             //   fontSize: 17,
-            //   color: '#00CC00',
+            //   color: Colors.MAIN_GREEN,
             //   fontWeight: '500',
             // }}
             showNope={false}
