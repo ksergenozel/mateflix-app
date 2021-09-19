@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 import {
   StyleSheet,
   Image,
@@ -15,16 +16,23 @@ import Colors from '../utils/Colors';
 import Constants from '../utils/Constants';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import EntypoIcon from 'react-native-vector-icons/Entypo';
+import ForeignProfileScreen from './ForeignProfileScreen';
 
 LogBox.ignoreAllLogs();
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
+const navigatorOptions = {
+  headerShown: false,
+  cardStyle: { backgroundColor: Colors.MAIN_BLACK },
+  presentation: 'modal',
+};
+
 class Card extends Component {
   render() {
     return (
-      <View style={styles.card}>
+      <TouchableOpacity activeOpacity={0.825} onLongPress={() => this.props.navigation.navigate('Foreign Profile')} style={styles.card}>
         <View
           style={{
             display: 'flex',
@@ -35,7 +43,7 @@ class Card extends Component {
           }}>
           <View />
 
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('Foreign Profile')}>
             <EntypoIcon
               name="info-with-circle"
               size={20}
@@ -109,12 +117,12 @@ class Card extends Component {
             {this.props.data.overview}
           </Text>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }
 
-export default class MatchesScreen extends Component {
+class MatchesScreen extends Component {
   state = {
     cards: [],
     isHidden: true,
@@ -246,6 +254,23 @@ export default class MatchesScreen extends Component {
     );
   }
 }
+
+const ForeignProfileStack = createStackNavigator();
+
+class ForeignProfileStackScreen extends React.Component {
+  render() {
+    return (
+      <ForeignProfileStack.Navigator
+        detachInactiveScreens={false}
+        screenOptions={navigatorOptions}>
+        <ForeignProfileStack.Screen name="Matches" component={MatchesScreen} />
+        <ForeignProfileStack.Screen name="Foreign Profile" component={ForeignProfileScreen} modal />
+      </ForeignProfileStack.Navigator>
+    );
+  }
+}
+
+export default ForeignProfileStackScreen;
 
 const styles = StyleSheet.create({
   card: {
